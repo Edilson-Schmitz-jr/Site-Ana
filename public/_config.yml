@@ -1,0 +1,14 @@
+# Jekyll config para GitHub Pages
+# Desabilita processamento Jekyll
+exclude:
+  - node_modules
+  - npm-debug.log
+  - yarn-debug.log
+  - yarn-error.log
+  - .DS_Store
+  - dist
+  - build
+
+# Garante que arquivos com underscore sejam incluídos
+include:
+  - .nojekyll
