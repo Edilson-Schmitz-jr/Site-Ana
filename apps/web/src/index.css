@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 35% 96%;
+    --foreground: 18 51% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 18 51% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 18 51% 15%;
+    --primary: 18 51% 37%;
+    --primary-foreground: 42 35% 96%;
+    --secondary: 52 18% 57%;
+    --secondary-foreground: 18 51% 15%;
+    --muted: 42 25% 92%;
+    --muted-foreground: 52 35% 29%;
+    --accent: 23 56% 71%;
+    --accent-foreground: 18 51% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 42 20% 85%;
+    --input: 42 20% 85%;
+    --ring: 18 51% 37%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 18 35% 8%;
+    --foreground: 42 35% 96%;
+    --card: 18 30% 12%;
+    --card-foreground: 42 35% 96%;
+    --popover: 18 30% 12%;
+    --popover-foreground: 42 35% 96%;
+    --primary: 18 51% 37%;
+    --primary-foreground: 42 35% 96%;
+    --secondary: 52 18% 35%;
+    --secondary-foreground: 42 35% 96%;
+    --muted: 18 25% 18%;
+    --muted-foreground: 52 18% 65%;
+    --accent: 23 56% 45%;
+    --accent-foreground: 42 35% 96%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 18 25% 22%;
+    --input: 18 25% 22%;
+    --ring: 18 51% 37%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variant-numeric: tabular-nums;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    text-wrap: balance;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
